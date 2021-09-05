@@ -3,7 +3,7 @@ import { Card, CardHeader, CardBody, CardFooter, Button } from "reactstrap";
 
 const controls = [
     { label: "Salad", type: "salad" },
-    { label: "Meat", type: "meat" }
+    { label: "Meat", type: "meat" },
 ]
 
 const BuildControl = props => {

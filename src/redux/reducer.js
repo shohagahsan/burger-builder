@@ -2,7 +2,7 @@ import * as actionTypes from './actionTypes';
 
 const INGREDIENT_PRICES = {
     meat: 80,
-    salad: 40
+    salad: 40,
 }
 
 const INITIAL_STATE = {
@@ -13,7 +13,7 @@ const INITIAL_STATE = {
     orders: [],
     orderLoading: true,
     orderErr: false,
-    totalPrice: 80,
+    totalPrice: 120,
     purchasable: false,
 }
 
@@ -56,7 +56,7 @@ export const reducer = (state = INITIAL_STATE, action) => {
                     { type: "meat", amount: 0 },
                     { type: "salad", amount: 0 }
                 ],
-                totalPrice: 80,
+                totalPrice: 120,
                 purchasable: false,
             }
         case actionTypes.LOAD_ORDERS:
@@ -70,6 +70,12 @@ export const reducer = (state = INITIAL_STATE, action) => {
             return {
                 ...state,
                 orders: orders,
+                orderLoading: false,
+            }
+        case actionTypes.LOAD_ORDER_FAILED:
+            return {
+                ...state,
+                orderErr: true,
                 orderLoading: false,
             }
         default:

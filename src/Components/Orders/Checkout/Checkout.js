@@ -51,7 +51,7 @@ class Checkout extends Component {
         const order = {
             ingredients: this.props.ingredients,
             customer: this.state.values,
-            price: this.state.totalPrice,
+            price: this.props.totalPrice,
             orderTime: new Date(),
         }
         axios.post("https://burger-builder-b136b-default-rtdb.firebaseio.com/order.json", order)

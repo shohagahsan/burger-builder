@@ -64,7 +64,7 @@ class BurgerBuilder extends Component {
                 <Modal isOpen={this.state.modalOpen}>
                     <ModalHeader>Your Order Summary</ModalHeader>
                     <ModalBody>
-                        <h5>Total Price: {this.props.totalPrice.toFixed(0)}</h5>
+                        <h5>Total Price: {this.props.totalPrice.toFixed(0)} BDT</h5>
                         <Summary ingredients={this.props.ingredients} />
                     </ModalBody>
                     <ModalFooter>
