@@ -111,7 +111,9 @@ class Checkout extends Component {
             <div>
                 {this.state.isLoading ? <Spinner /> : form}
                 <Modal isOpen={this.state.isModalOpen} onClick={this.goBack}>
-                    <p>{this.state.modalMsg}</p>
+                    <ModalBody>
+                        <p>{this.state.modalMsg}</p>
+                    </ModalBody>
                 </Modal>
             </div >
         )
